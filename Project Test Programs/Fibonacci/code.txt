@@ -1,0 +1,21 @@
+FibonacciBaseCase:
+addi t1,x0, 2
+bge a0, t1, FibonacciRecursion
+Jalr x0, ra, 0
+FibonacciRecursion: 
+addi sp, sp, -12
+sw ra, 8(sp)
+sw a0, 0(sp)
+addi a0, a0, -1
+jal ra, FibonacciBaseCase
+sw a0, 4(sp)
+lw a0, 0(sp)
+addi a0, a0, -2
+jal ra, FibonacciBaseCase
+lw t1, 4(sp)
+add a0, a0, t1
+lw ra, 8(sp)
+addi sp, sp, 12
+Jalr x0, ra, 0
+main: addi a0,x0, 10
+Jal ra, FibonacciBaseCase

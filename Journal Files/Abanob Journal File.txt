@@ -1,0 +1,4 @@
+May 6th 3 pm: Modified the function responsible for reading the instructions and made it extract the labels and store their addresses. Fixed 		an issue with the addresses of the extracted instruction and wrote the conversion from binary to decimal function.
+May 7th 11 pm: Added support for the I type instructions in the instruction tokenizations function
+May 8th 10 pm: Created the instruction execution function and added support for the I type instructions.
+May 10th 2 pm: wrote the main function along with youssif and michael. 

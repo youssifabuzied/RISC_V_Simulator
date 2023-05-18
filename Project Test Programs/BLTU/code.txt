@@ -1,0 +1,8 @@
+main:
+addi t0, x0, -10 
+addi t1, x0, 20 
+bltu t0, t1, exit
+
+
+exit: addi t2, x0, 2
+   

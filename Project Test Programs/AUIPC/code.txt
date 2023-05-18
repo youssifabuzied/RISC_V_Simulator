@@ -1,0 +1,2 @@
+main:AUIPC t0, 300
+   

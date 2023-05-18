@@ -1,0 +1,5 @@
+main:addi t0, x0, 10
+     sub t1, x0,t0
+     addi t2, x0,3
+     sra t3, t1, t2
+   

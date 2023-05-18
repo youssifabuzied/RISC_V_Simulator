@@ -1,0 +1,12 @@
+main:  addi t1, x0, 100  
+lhu  t2, 0(t1)     
+addi t3, x0, 200  
+lbu  t4, 0(t2)
+addi t5, x0, 300  
+lh  s0, 0(t5)
+addi s1,t6,-8
+addi s2,s2,-222
+sh s2,0(s1)
+
+    
+ 

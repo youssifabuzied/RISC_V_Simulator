@@ -1,0 +1,5 @@
+May 4st 11 pm: wrote the function reposnible for initializing the registers and writing their equivalent names (initialize registers)
+May 6nd 6 pm: wrote the function reposible for reading the data file and initializing the mmemory hashmap in the code and wrote the function 	that transfrom from signed decimal numbers to binary.
+May 7th 4 pm: in the instruction tokenization function, added support for the SB, U, Sm J type instructions.
+May 9th 9 pm: in the execute instructions function, added support for the the SB, U, Sm J type instructions and the Ecall, Ebreak, and fence instructions. Also, fixed an issue related to the program counter and added a try except block.
+May 10th 2 pm: wrote the main function along with michael and abanob.

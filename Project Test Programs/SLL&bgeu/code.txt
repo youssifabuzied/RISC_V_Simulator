@@ -1,0 +1,12 @@
+main:
+    addi x2, x0, 10 
+    addi x3, x0, 14 
+
+    
+loop:
+    bgeu x2, x3, exit 
+    sll x5, x3, x3   
+    addi x2, x2, 1   
+    Bge x0,x0,loop 
+    
+exit:

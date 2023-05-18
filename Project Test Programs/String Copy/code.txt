@@ -1,0 +1,14 @@
+strcpy:
+addi s0,zero,0 
+L1: add t1, s0, a1 
+lbu t2, 0(t1) 
+add t3, s0, a0 
+sb t2, 0(t3) 
+beq t2, zero, L2 
+addi s0, s0, 1
+beq zero,zero, L1 
+L2:
+Jalr zero, ra,0
+main: addi a1,zero,0
+addi a0,zero,12
+Jal ra,strcpy

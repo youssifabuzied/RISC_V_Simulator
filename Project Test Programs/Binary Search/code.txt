@@ -1,0 +1,52 @@
+BinarySearch:
+addi t0, x0, 1
+beq a2, zero, BaseCase 
+bne t0, a2,maincase 
+BaseCase:    
+lw t1, 0(a0)
+addi t2, x0, 0
+beq t1, a1,Found
+NotFound:
+addi a0, x0, -1
+Jalr x0, ra,0
+Found:
+add a0, a0, t2
+Jalr x0, ra,0
+maincase:                      
+srli t0, a2, 1
+add t2, t0, x0
+slli t2,t2, 2
+add t2, t2, a0
+lw t1, 0(t2)
+beq t1, a1, Found1
+NotFound1:
+bge t1, a1, Greater
+Smaller:			
+addi sp, sp, -4
+sw ra, 0(sp)
+addi a2, a2, -1
+srli a2,a2,1
+slli t0, t0, 2
+add a0,t0, a0
+addi a0, a0, 4
+Jal ra,BinarySearch
+lw ra, 0(sp)
+addi sp, sp, 4
+Jalr x0, ra, 0 
+Greater:				
+addi sp, sp, -4
+sw ra, 0(sp)
+srli a2,a2,1
+Jal ra,BinarySearch
+lw ra, 0(sp)
+addi sp, sp, 4
+Jalr x0, ra, 0 
+Found1:
+slli t0, t0, 2
+add a0, a0, t0
+Jalr x0, ra,0
+main: addi a0,zero,0
+addi a1, x0, 6
+addi a2, x0, 8
+Jal ra, BinarySearch 
+
